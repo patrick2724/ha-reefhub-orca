@@ -1,0 +1,34 @@
+set_channel:
+  fields:
+    device_id:
+      required: true
+      selector:
+        device:
+          integration: reefhub_orca
+    channel:
+      default: 1
+      selector:
+        number:
+          min: 1
+          max: 4
+          mode: box
+    point_a:
+      selector:
+        number:
+          min: -90
+          max: 90
+          unit_of_measurement: "°"
+          mode: slider
+    point_b:
+      selector:
+        number:
+          min: -90
+          max: 90
+          unit_of_measurement: "°"
+          mode: slider
+    speed:
+      selector:
+        number:
+          min: 10
+          max: 250
+          mode: slider

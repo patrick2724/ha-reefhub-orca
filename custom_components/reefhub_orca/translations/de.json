@@ -1,0 +1,93 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "reefhub ORCA verbinden",
+        "description": "IP-Adresse oder myorca-SERIENNUMMER.local des Controllers. Die lokale API braucht Firmware 7.0.x (ORCA Controller) bzw. 1.2.x (ORCAlight).",
+        "data": {
+          "host": "Host"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Controller nicht erreichbar",
+      "not_orca": "Unter dieser Adresse antwortet kein ORCA-Controller"
+    },
+    "abort": {
+      "already_configured": "Dieser Controller ist schon eingerichtet"
+    }
+  },
+  "entity": {
+    "switch": {
+      "rotation": {
+        "name": "Kanal {channel} Drehung"
+      }
+    },
+    "number": {
+      "point_a": {
+        "name": "Kanal {channel} Punkt A"
+      },
+      "point_b": {
+        "name": "Kanal {channel} Punkt B"
+      },
+      "speed": {
+        "name": "Kanal {channel} Geschwindigkeit"
+      }
+    },
+    "button": {
+      "selftest": {
+        "name": "Kanal {channel} Selbsttest"
+      },
+      "restart": {
+        "name": "Controller neu starten"
+      }
+    },
+    "sensor": {
+      "cloud_status": {
+        "name": "Cloud-Status"
+      },
+      "orca_status": {
+        "name": "Kanal {channel} Status"
+      },
+      "selftest_status": {
+        "name": "Kanal {channel} Selbsttest-Status"
+      }
+    },
+    "binary_sensor": {
+      "cloud_connected": {
+        "name": "Cloud verbunden"
+      },
+      "calibrated": {
+        "name": "Kanal {channel} kalibriert"
+      }
+    }
+  },
+  "services": {
+    "set_channel": {
+      "name": "Kanal einstellen",
+      "description": "Setzt Punkt A, Punkt B und/oder Geschwindigkeit. Nicht angegebene Werte bleiben, wie sie sind.",
+      "fields": {
+        "device_id": {
+          "name": "Controller",
+          "description": "Der ORCA-Controller"
+        },
+        "channel": {
+          "name": "Kanal",
+          "description": "1–4 (ORCAlight: nur 1)"
+        },
+        "point_a": {
+          "name": "Punkt A",
+          "description": "Winkel −90 bis 90°"
+        },
+        "point_b": {
+          "name": "Punkt B",
+          "description": "Winkel −90 bis 90°"
+        },
+        "speed": {
+          "name": "Geschwindigkeit",
+          "description": "10 bis 250"
+        }
+      }
+    }
+  }
+}

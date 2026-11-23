@@ -1,0 +1,127 @@
+<html><head>
+    <title>ORCA Fallback Configuration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+    <section name="header">
+        <div>
+            <img width="140" src="DATA"></div>
+    </section>
+
+    <section>
+        <div style="margin-left:1px; margin-right:1px;margin-bottom:10px;font-size:14px;border:1px solid #ccc;padding:5px;">
+
+            <div style="margin-top:10px;margin-bottom:10px">
+                Version: 1.2.9 (ID: abcd1234ef)
+            </div>
+
+            <div style="margin-top:10px;margin-bottom:10px">
+                Cloud-Status: <span style="background-color:#333; color:white; padding:5px;font-weight:bold">Connected.</span>
+            </div>
+
+            <p>
+                This is the fallback configuration page. <strong>Please use this option only in case of a non working reefhub-cloud service or internet problems.</strong>
+            </p>
+
+            <p>With this fallback configuration you have a fundamental control option over your ORCA System. <strong>All further setup-options are available through our cloud-service.</strong></p>
+
+            <p>Your ORCA Controller will automatically reconnect ot the cloud, if the cloud or the internet work properly. </p>
+
+            <p>
+                In case of any problems with your ORCA Controller, try to restart the entire system once. Your connected ORCAunits has to be selftested/calibrated after a reboot.
+
+            </p>
+            <div style="margin-top:10px;margin-bottom:10px">
+                <a href="/restart"><button class="button">Restart your ORCA</button></a>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <div style="position:relative;margin-left:1px; margin-right:1px;margin-bottom:10px;font-size:14px;border:1px solid #999; background-color:#e4e4e4; padding:5px;padding-top:30px">
+
+            <div style="position:absolute;top:0px;left:0px;background-color:#4c4c4c;color:#fff;text-align: left;padding:5px;font-size:10px;font-weight:bold">
+                Channel 1
+            </div>
+
+            <p>
+                On every restart, your ORCA units have to be successfully <strong>selftested</strong> and <strong>calibrated</strong> before a rotation is possible.
+            </p>
+
+            <div style="margin-top:10px;margin-bottom:10px">
+                Selftest-Status: <span style="background-color:#ccc; padding:5px;font-weight:bold">Success! Ready to go.</span>
+            </div>
+            <div style="margin-top:10px;margin-bottom:10px">
+                ORCA-Status: <span style="background-color:#333; color:white; padding:5px;font-weight:bold">Stopped.</span>
+            </div>
+
+            <div style="display:flex; flex-direction: row;justify-content: center;margin-bottom:10px;">
+                <div style="margin-top:10px;margin-bottom:10px">
+                    <a href="/selftest?channel=1"><button class="control-button">Selftest now</button></a>
+                </div>
+                <div style="margin-top:10px;margin-bottom:10px">
+                    <a href="/start?channel=1"><button class="control-button" style="background-color:green">Start</button></a>
+                </div>
+                <div style="margin-top:10px;margin-bottom:10px">
+                    <a href="/stop?channel=1"><button class="control-button" style="background-color:red">Stop</button></a>
+                </div>
+            </div>
+
+            <div style="margin-top:20px;margin-bottom:10px;font-size:18px;font-weight:bold">
+                Channel-Settings
+            </div>
+            <form action="/save/channel1" method="post">
+            <div style="margin-top:10px;margin-bottom:10px;">
+                <div style="font-size:10px;font-weight:bold;text-align:center">Point A (Degree Min:-90 Max:90)</div>
+                <div>
+                    <input style="padding:5px;text-align:center" type="text" name="channel1_min" id="channel1_min" value="-90">
+                </div>
+
+            </div>
+            <div style="margin-top:10px;margin-bottom:10px;">
+                <div style="font-size:10px;font-weight:bold;text-align:center">Point B (Degree Min:-90 Max:90)</div>
+                <div>
+                    <input style="padding:5px;text-align:center" type="text" name="channel1_max" id="channel1_max" value="90">
+                </div>
+
+            </div>
+            <div style="margin-top:10px;margin-bottom:10px;">
+                <div style="font-size:10px;font-weight:bold;text-align:center">Speed (min:10 max:250)</div>
+                <div>
+                    <input style="padding:5px;text-align:center" type="text" name="channel1_speed" id="channel1_speed" value="100">
+                </div>
+
+            </div>
+
+            <div style="margin-top:10px;margin-bottom:10px">
+               <button class="control-button" type="submit" style="width:300px">Save Settings</button>
+            </div>
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <section>
+        <div>
+            <img width="64" src="DATA">
+            <div style="font-size:10px;color:#999">
+                ORCAlight Controller Fallback-Setup Page
+                <br>
+                <strong>Use this page only in case of a cloud-service failure!</strong>
+                <br>
+                (c)2023 reefhub.de
+            </div>
+        </div>
+
+    </section>
+
+
+
+</body></html>

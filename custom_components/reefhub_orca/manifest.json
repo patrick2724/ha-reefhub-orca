@@ -1,0 +1,14 @@
+{
+  "domain": "reefhub_orca",
+  "name": "reefhub ORCA (1. Generation)",
+  "codeowners": [
+    "@patrick2724"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/patrick2724/ha-reefhub-orca",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/patrick2724/ha-reefhub-orca/issues",
+  "requirements": [],
+  "version": "1.0.1"
+}
